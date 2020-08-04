@@ -96,6 +96,8 @@ html {
 }
 
 .site-header .header-cue {
+  position: absolute;
+  bottom: 0;
   animation: clear 0.5s 1.5s forwards;
   transform: translateY(2rem);
   z-index: 10;
@@ -127,6 +129,7 @@ html {
 #areas img {
   width: 100%;
   box-shadow: 0 3px 10px #777;
+  filter: saturate(150%);
 }
 
 @keyframes slideUp {
