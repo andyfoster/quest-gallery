@@ -6,6 +6,10 @@ $(function () {
   let viewAreas = document.querySelector('#areas');
   let navHeight = nav.scrollHeight;
 
+  areaScroll.forEach(
+    (item) => (item.style.animationDelay = `${Math.random() * 0.5 + 0.4}s`)
+  );
+
   function inViewPort(el) {
     let rect = el.getBoundingClientRect();
     return (
