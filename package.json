@@ -1,0 +1,14 @@
+{
+  "name": "quest-animated-photo-gallery",
+  "version": "1.0.0",
+  "description": "Quest 2018 Photo Gallery",
+  "author": "Andy Foster",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
+  }
+}
