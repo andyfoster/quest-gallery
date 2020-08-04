@@ -4,10 +4,14 @@
   "description": "Quest 2018 Photo Gallery",
   "author": "Andy Foster",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "browser-sync": "^2.26.10",
+    "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1"
   }
