@@ -1,15 +1,22 @@
 $(function () {
+  let headerContent = document.querySelector('.header-content');
   let nav = document.querySelector('.site-nav');
+  let headerCue = document.querySelector('.header-cue');
   let viewAreas = document.querySelector('#areas');
   let navHeight = nav.scrollHeight;
 
   function moveHeader() {
     let mainOnTop = viewAreas.getBoundingClientRect().top - navHeight;
-    // console.log(`${viewAreas.getBoundingClientRect().top}`);
 
     mainOnTop < 0
       ? nav.classList.add('in-body')
       : nav.classList.remove('in-body');
+
+    let currentViewPosition = headerContent.getBoundingClientRect().top;
+
+    currentViewPosition < 0
+      ? headerCue.classList.add('d-none')
+      : headerCue.classList.remove('d-none');
 
     window.requestAnimationFrame(moveHeader);
   }

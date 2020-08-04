@@ -126,6 +126,7 @@ html {
 
 #areas img {
   width: 100%;
+  box-shadow: 0 3px 10px #777;
 }
 
 @keyframes slideUp {
