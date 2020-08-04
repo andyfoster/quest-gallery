@@ -1,9 +1,19 @@
 $(function () {
   let headerContent = document.querySelector('.header-content');
   let nav = document.querySelector('.site-nav');
+  let areaScroll = document.querySelectorAll('#area-group .area');
   let headerCue = document.querySelector('.header-cue');
   let viewAreas = document.querySelector('#areas');
   let navHeight = nav.scrollHeight;
+
+  function inViewPort(el) {
+    let rect = el.getBoundingClientRect();
+    return (
+      (rect.top <= 0 && rect.bottom >= 0) ||
+      (rect.bottom >= window.innerHeight && rect.top <= window.innerHeight) ||
+      (rect.top >= 0 && rect.bottom < window.innerHeight)
+    );
+  }
 
   function moveHeader() {
     let top = window.pageYOffset;
@@ -22,6 +32,12 @@ $(function () {
     headerContent.style.transform = `translateY(-${top / 1}px)`;
     headerContent.style.opacity =
       1 - Math.max(top / (window.innerHeight * 0.3), 0);
+
+    areaScroll.forEach((item) =>
+      inViewPort(item)
+        ? item.classList.add('appear')
+        : item.classList.remove('appear')
+    );
 
     window.requestAnimationFrame(moveHeader);
   }
