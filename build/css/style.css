@@ -114,6 +114,10 @@ html {
   /* background-position: top; */
 }
 
+#areas img {
+  width: 100%;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(300px) scale(1.5);
