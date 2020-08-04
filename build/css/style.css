@@ -6,6 +6,16 @@ html {
   z-index: 100;
 }
 
+.site-nav.in-body {
+  background: rgba(156, 211, 204, 0.8);
+  animation: clear 1.25s forwards;
+  opacity: 0;
+}
+
+.site-nav.in-body a {
+  color: white !important;
+}
+
 .title-container {
   background: linear-gradient(
     180deg,
