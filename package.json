@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.27.10",
     "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1"
